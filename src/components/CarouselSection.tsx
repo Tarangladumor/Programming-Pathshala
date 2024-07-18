@@ -26,8 +26,8 @@ const CarouselSection = () => {
             <Carousel>
                 <CarouselContent >
                     <CarouselItem className={`${mode === 'dark' ? "bg-[#1A202C]" : "bg-[#F5F7FA]"}`}>
-                        <div className="flex flex-col lg:flex-row justify-center items-center p-8 lg:p-32 gap-8 lg:gap-10  h-[400px] lg:h-[500px]">
-                            <div className="flex-1 text-center lg:text-left">
+                        <div className="flex flex-col lg:flex-row justify-center items-center p-8 lg:p-32 gap-8 h-[400px] lg:h-[500px] mt-20">
+                            <div className="flex text-center lg:text-left">
                                 <div className="flex flex-col gap-4">
                                     <h1 className={`font-semibold text-2xl lg:text-6xl ${mode === 'dark' ? 'text-[#E5E7EB]' : 'text-[#4D4D4D]'} max-w-full lg:max-w-[75%]`}>
                                         Lessons and insights <HighlightText text="from 8 years" />
@@ -38,8 +38,8 @@ const CarouselSection = () => {
                                     <Button className="w-fit text-base mx-auto lg:mx-0">Register</Button>
                                 </div>
                             </div>
-                            <div className="flex-1 max-h-[250px] lg:max-h-[350px]">
-                                <Image src={SLIDE1} alt="Carousel_image"  className="object-contain max-h-full" />
+                            <div className="flex max-h-[250px] lg:max-h-[350px]">
+                                <Image src={SLIDE1} alt="Carousel_image"  className="object-contain max-h-full"/>
                             </div>
                         </div>
                     </CarouselItem>
