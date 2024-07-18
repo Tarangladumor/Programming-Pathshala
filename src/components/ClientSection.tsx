@@ -11,7 +11,8 @@ import modeStore from "@/store/modeStore"
 
 const ClientSection = () => {
 
-    const {mode} = modeStore((state) => ({mode:state.mode}))
+    const {mode} = modeStore((state) => ({mode:state.mode}));
+    
     return (
         <div className={`py-10 ${mode === 'dark' ? "bg-black" : "bg-white"}`}>
 

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* globals.css */
+/* globals.css
 body {
   transition: background-color 0.3s, color 0.3s;
 }
@@ -15,6 +15,10 @@ body.light {
 body.dark {
   background-color: #000000;
   color: #ffffff;
+} */
+
+.invert img {
+  filter: invert(1);
 }
 
 
