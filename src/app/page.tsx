@@ -23,7 +23,6 @@ export default function Home() {
     <div className={`${mode === "dark" ? "bg-black" : "bg-white"}`}>
       <Navbar/>
 
-      <DarkModeToggle/>
     
         <CarouselSection/>
 

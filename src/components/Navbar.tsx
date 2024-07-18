@@ -9,6 +9,7 @@ import Image from 'next/image';
 import LOGO from '../assests/Logo.png'
 import FOOTER_LOGO from '../assests/Footer_logo.png'
 import modeStore from '@/store/modeStore';
+import DarkModeToggle from './common/DarkModeToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,6 +53,9 @@ const Navbar = () => {
           <Link href="/signup">
             <Button>Sign up</Button>
           </Link>
+          <div>
+            <DarkModeToggle />
+          </div>
         </div>
         <div className="md:hidden flex items-center">
           <button
@@ -67,40 +71,40 @@ const Navbar = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <ul className="space-y-4 px-4 py-2">
+        <div className={`md:hidden bg-white shadow-lg ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>
+          <ul className={`space-y-4 px-4 py-2 ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>
             <li>
-              <Link href="/" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/service" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/service" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 Service
               </Link>
             </li>
             <li>
-              <Link href="/feature" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/feature" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 Feature
               </Link>
             </li>
             <li>
-              <Link href="/product" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/product" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 Product
               </Link>
             </li>
             <li>
-              <Link href="/testimonial" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/testimonial" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 Testimonial
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/faq" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/login" className="text-gray-700 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/login" className={`${mode === 'dark' ? "text-gray-300 hover:text-gray-100" : "text-gray-700 hover:text-gray-900"}`} onClick={() => setIsMenuOpen(false)}>
                 <Button variant={'link'}>Login</Button>
               </Link>
             </li>
@@ -108,6 +112,9 @@ const Navbar = () => {
               <Link href="/signup" onClick={() => setIsMenuOpen(false)}>
                 <Button>Sign up</Button>
               </Link>
+            </li>
+            <li>
+              <DarkModeToggle />
             </li>
           </ul>
         </div>

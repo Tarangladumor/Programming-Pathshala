@@ -26,7 +26,7 @@ const CarouselSection = () => {
             <Carousel>
                 <CarouselContent >
                     <CarouselItem className={`${mode === 'dark' ? "bg-[#1A202C]" : "bg-[#F5F7FA]"}`}>
-                        <div className="flex flex-col lg:flex-row justify-center items-center p-8 lg:p-32 gap-8 lg:gap-0  h-[400px] lg:h-[500px]">
+                        <div className="flex flex-col lg:flex-row justify-center items-center p-8 lg:p-32 gap-8 lg:gap-10  h-[400px] lg:h-[500px]">
                             <div className="flex-1 text-center lg:text-left">
                                 <div className="flex flex-col gap-4">
                                     <h1 className={`font-semibold text-2xl lg:text-6xl ${mode === 'dark' ? 'text-[#E5E7EB]' : 'text-[#4D4D4D]'} max-w-full lg:max-w-[75%]`}>
@@ -44,7 +44,7 @@ const CarouselSection = () => {
                         </div>
                     </CarouselItem>
                     <CarouselItem className={`${mode === 'dark' ? "bg-[#1A202C]" : "bg-[#F5F7FA]"}`}>
-                        <div className="flex flex-col lg:flex-row justify-center items-center p-8 lg:p-32 gap-8 lg:gap-8">
+                        <div className="flex flex-col lg:flex-row justify-center items-center p-8 lg:p-32 gap-8">
                             <div className="flex-1 text-center lg:text-left">
                                 <div className="flex flex-col gap-4">
                                     <h1 className={`font-semibold text-2xl lg:text-6xl ${mode === 'dark' ? 'text-[#E5E7EB]' : 'text-[#4D4D4D]'} max-w-full lg:max-w-[75%]`}>
