@@ -6,11 +6,14 @@ import ICON4 from '../assests/Icon4.png'
 import ICON5 from '../assests/Icon5.png'
 import ICON6 from '../assests/Icon6.png'
 import Headers from "./common/Headers"
+import modeStore from "@/store/modeStore"
 
 
 const ClientSection = () => {
+
+    const {mode} = modeStore((state) => ({mode:state.mode}))
     return (
-        <div className="py-10">
+        <div className={`py-10 ${mode === 'dark' ? "bg-black" : "bg-white"}`}>
 
             <Headers heading="Our Clients" para="We have been working with some Fortune 500+ clients"/>
 

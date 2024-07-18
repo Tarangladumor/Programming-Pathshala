@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 
 @layer base {
   :root {

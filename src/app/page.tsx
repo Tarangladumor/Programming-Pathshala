@@ -1,3 +1,5 @@
+'use client'
+
 import All_CustomerSection from "@/components/All_CustomerSection";
 import CarouselSection from "@/components/CarouselSection";
 import ClientSection from "@/components/ClientSection";
@@ -8,11 +10,21 @@ import LastSection from "@/components/LastSection";
 import MarketingSection from "@/components/MarketingSection";
 import LOGIN from '../assests/Login_img.png'
 import MOBILE from '../assests/mobile_img.png'
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import DarkModeToggle from "@/components/common/DarkModeToggle";
+import modeStore from "@/store/modeStore";
 
 export default function Home() {
+
+  const {mode} = modeStore((state) => ({mode:state.mode}));
+
   return (
-    <div>
+    <div className={`${mode === "dark" ? "bg-black" : "bg-white"}`}>
+      <Navbar/>
+
+      <DarkModeToggle/>
+    
         <CarouselSection/>
 
         <ClientSection/>
@@ -34,7 +46,7 @@ export default function Home() {
 
         <LastSection/>
 
-        
+        <Footer/>
     </div>
   );
 }
